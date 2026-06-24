@@ -9,3 +9,9 @@
 #include "managers/AdminManager.h"
 
 using namespace std;
+
+int main()
+{
+
+    return 0;
+}

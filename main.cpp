@@ -9,3 +9,12 @@
 #include "managers/AdminManager.h"
 
 using namespace std;
+
+
+int main () {
+
+
+
+    cout << "hi mezoo"<<endl;
+
+}

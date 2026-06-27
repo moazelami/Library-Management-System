@@ -9,10 +9,3 @@
 #include "managers/AdminManager.h"
 
 using namespace std;
-
-int main()
-{
-    cout << "allah akbar" << endl;
-
-    return 0;
-}

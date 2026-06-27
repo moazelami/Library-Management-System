@@ -13,7 +13,6 @@ using namespace std;
 int main()
 {
     cout << "allah akbar" << endl;
-    cout << "hello library project" << endl;
 
     return 0;
 }

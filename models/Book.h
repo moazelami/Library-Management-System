@@ -25,22 +25,22 @@ public:
         available = false;
         copies = 0;
     }
-    Book(int id, float price, string title, string author, bool available, int copies)
+    Book(int Id, float Price, string Title, string Author, bool Available, int Copies)
     {
-        id = id;
-        price = price;
-        title = title;
-        author = author;
-        available = available;
-        copies = copies;
+        id = Id;
+        price = Price;
+        title = Title;
+        author = Author;
+        available = Available;
+        copies = Copies;
     }
 
-    void SetId(int id) { id = id; }
-    void SetPrice(float price) { price = price; }
-    void SetTitle(string title) { title = title; }
-    void SetAuthor(string author) { author = author; }
-    void SetAvailable(bool available) { available = available; }
-    void SetCopies(int copies) { copies = copies; }
+    void SetId(int Id) { id = Id; }
+    void SetPrice(float Price) { price = Price; }
+    void SetTitle(string Title) { title = Title; }
+    void SetAuthor(string Author) { author = Author; }
+    void SetAvailable(bool Available) { available = Available; }
+    void SetCopies(int Copies) { copies = Copies; }
 
     int GetId() { return id; }
     float GetPrice() { return price; }

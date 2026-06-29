@@ -42,8 +42,8 @@ public:
     void SetAvailable(bool av) { av = available; }
     void SetCopies(int c) { c = copies; }
 
+    
     int GetId() { return id; }
-
     float GetPrice() { return price; }
     string GetTitle() { return title; }
     string GetAuthor() { return author; }

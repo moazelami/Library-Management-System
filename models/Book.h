@@ -9,7 +9,7 @@ class Book
 
 private:
     int id;
-    float price;
+    double price;
     string title;
     string author;
     bool available;
@@ -23,40 +23,44 @@ public:
         title = "";
         author = "";
         available = false;
+        price = 0;
         copies = 0;
     }
-    Book(int Id, float Price, string Title, string Author, bool Available, int Copies)
+    Book(int id, const string &title, const string &author, bool available, double price, int copies)
     {
-        id = Id;
-        price = Price;
-        title = Title;
-        author = Author;
-        available = Available;
-        copies = Copies;
+        id = id;
+        SetPrice(price);
+        this -> title = title;
+        this-> author = author;
+        this-> available = available;
+        this-> copies = copies;
     }
 
-    void SetId(int Id) { id = Id; }
-    void SetPrice(float Price) { price = Price; }
-    void SetTitle(string Title) { title = Title; }
-    void SetAuthor(string Author) { author = Author; }
-    void SetAvailable(bool Available) { available = Available; }
-    void SetCopies(int Copies) { copies = Copies; }
+    void SetId(int id) { this -> id = id; }
+    void SetPrice(double price)
+    { 
+        if(price >= 0)
+            this -> price = price; 
+    }
+    void SetTitle(const string& title) { this -> title = title; }
+    void SetAuthor(const string& author) { this -> author = author; }
+    void IsAvailable(bool available) { this -> available = available; }
+    void SetCopies(int copies) { this -> copies = copies; }
 
-    int GetId() { return id; }
-    float GetPrice() { return price; }
-    string GetTitle() { return title; }
-    string GetAuthor() { return author; }
-    bool GetAvailable() { return available; }
-    int GetCopies() { return copies; }
+    int GetId() const { return id; }
+    float GetPrice() const { return price; }
+    string GetTitle() const { return title; }
+    string GetAuthor() const { return author; }
+    bool GetAvailable() const { return available; }
+    int GetCopies() const { return copies; }
 
-    void Display()
+    void DisplayBook()
     {
 
         cout << "ID        :" << GetId() << endl;
-        cout << "PRICE     :" << GetPrice() << endl;
         cout << "TITLE     :" << GetTitle() << endl;
         cout << "AUTHOR    :" << GetAuthor() << endl;
-        cout << "AVAILABLE :" << GetAvailable() << endl;
+        cout << "PRICE     :" << GetPrice() << endl;
         cout << "COPIES    :" << GetCopies() << endl;
     }
 };
